@@ -1,0 +1,18 @@
+<% title(t('.page_title')) %>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-panel govuk-panel--confirmation app-confirmation-panel">
+      <h1 class="govuk-panel__title">
+        Report submitted
+      </h1>
+      <div class="govuk-panel__body">
+        Your reference number<br><strong><%= @issue.reference_number %></strong>
+      </div>
+    </div>
+    <%= t(".confirmation_text_html", 
+      link_info_charter:link_info_charter, 
+      link_statement:link_statement, 
+      feedback_link: feedback_link( t(".feedback_link_text")))
+    %>
+  </div>
+</div>

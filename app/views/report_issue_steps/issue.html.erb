@@ -1,0 +1,10 @@
+<% title(t('.page_title')) %>
+<%= render partial: 'back_link' %>
+
+<%= form_for @issue, url: report_issue_step_path(params[:id]), :as => :issue do |f| %>
+  <%= f.govuk_error_summary %>
+  <%= f.govuk_text_area :issue, label: {size: 'l', tag: 'h1'}, rows: 8 do  %>
+    <%= t('.supplement_text_html') -%>
+  <% end %>
+  <%= f.govuk_submit %>
+<% end %>

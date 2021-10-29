@@ -1,0 +1,10 @@
+<% title(t('.page_title')) %>
+<%= render partial: 'back_link' %>
+
+<%= form_for @issue, url: report_issue_step_path(params[:id]), :as => :issue do |f| %>
+  <%= f.govuk_error_summary %>
+  <%= f.govuk_collection_check_boxes :impact_area, 
+     ReportIssue::IssueAreas::ISSUE_AREA_OPTIONS, ->(option) {option}, ->(option) {option}, legend: {size: 'l', tag: 'h1'}%>
+  <%= f.govuk_text_field :impact_other %>
+  <%= f.govuk_submit %>
+<% end %>

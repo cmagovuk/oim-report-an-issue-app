@@ -1,0 +1,17 @@
+<% title(t('.page_title')) %>
+<%= render partial: 'back_link' %>
+
+<%= form_for @issue, url: report_issue_step_path(params[:id]), :as => :issue do |f| %>
+  <%= f.govuk_error_summary %>
+  <%= f.govuk_fieldset legend: {text: t('.fieldset_legend'), size: 'l', described_by:"hint", tag: 'h1'} do %>
+    <div id="hint" class="govuk-hint">
+      <%= t('.hint_html') %>
+    </div>
+    <%= f.govuk_text_field :addr_line_1, autocomplete: "address-line1", width: 'two-thirds' %>
+    <%= f.govuk_text_field :addr_line_2, autocomplete: "address-line2", width: 'two-thirds', label: {hidden: true} %>
+    <%= f.govuk_text_field :addr_town, autocomplete:"address-level2", width: 'one-half' %>
+    <%= f.govuk_text_field :addr_county, width: 'one-half' %>
+    <%= f.govuk_text_field :addr_postcode, autocomplete: "postal-code", spellcheck:"false", width: 10 %>
+  <% end %>
+  <%= f.govuk_submit %>
+<% end %>

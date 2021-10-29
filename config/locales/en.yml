@@ -1,0 +1,201 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at https://guides.rubyonrails.org/i18n.html.
+
+en:
+  service: 
+    name: "Report UK Internal Market Issue"
+    
+  link:
+    back: Back
+
+  feedback:
+    subject: Feedback for 'Report UK Internal Market issue' form
+
+  buttons:
+    upload_files: Upload file
+
+  documents_table:
+    headers:
+      file_name: File name
+      status: Status
+      file_size: File size
+      action: Action
+  
+  cookie_banner:
+    confirmation_message:
+      true: You've accepted analytics cookies.
+      false: You've rejected analytics cookies.
+  layouts:
+    application:
+      phase_text_html: This is a new service - your %{feedback_link} will help us to improve it.
+      cookies: Cookies
+      accessibility_link: Accessibility statement
+
+  report_issues:
+    show:
+      page_title: Report submitted
+      feedback_link_text: What did you think of this service?
+      confirmation_text_html: |
+
+        <h2 class="govuk-heading-m">What happens next</h2>
+
+        <p class="govuk-body">
+          Thank you for completing this online form. Your submission has been successfully received by the Office for the Internal Market (OIM).
+        </p>
+        <!-- <p class="govuk-body">If you have provided an email address, you will receive automated confirmation of your submission.</p> -->
+        <p class="govuk-body">A response from the OIM will follow in the next 10 working days. While the OIM has no powers to resolve an individual issue, we will review your submission and where possible, we will point you towards relevant guidance and potential sources of assistance.</p>
+        <p class="govuk-body">
+          The information you share with us about issues in the UK internal market is invaluable in enabling us to monitor how trade within the UK is functioning and to identify emerging issues. It informs our reporting to governments, helping them to understand the impact of laws on businesses and consumers around the UK.
+        </p>
+
+        <p class="govuk-body">
+          For a reminder of how the OIM will use the information that you submit, you can view the CMA’s <a href="%{link_info_charter}" class="govuk-link" target="_blank">personal information charter</a> and <a href="%{link_statement}" class="govuk-link" target="_blank">statement on transparency and disclosure</a>.
+        </p>
+
+        <p class="govuk-body">
+          %{feedback_link}
+        </p>
+    index:
+      page_title: Your information
+      heading: How we use your information
+      privacy_notice_html: |
+        <p class="govuk-body">When you use this service, you will be asked to provide the Office for the Internal Market (OIM), which is part of the Competition and Markets Authority (CMA), with:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>information about an issue in the UK internal market, i.e., the flow of goods and services between England, Northern Ireland, Scotland, and Wales</li>
+          <li>personal data (identifying information about yourself or someone else)</li>
+        </ul>
+        <p class="govuk-body">Our <a href="%{link_info_charter}" class="govuk-link govuk-link--no-visited-state">How we use your information</a> page explains how the OIM will handle both types of information.</p>
+  report_issue_steps:
+    contact_details:
+      page_title: Name and contact details
+      fieldset_legend: Name and contact details
+      hint_html: Enter your name along with your email address and/or telephone number.
+    reporting_as:
+      page_title: I am reporting as
+    org_name:
+      page_title: Name of your organisation
+    address:
+      page_title: Your address
+      heading: Your address
+      fieldset_legend: Your address
+      hint_html: If you are reporting in a professional capacity, please enter your business address.
+    org_area:
+      page_title: Your business areas
+    org_sector:
+      page_title: Your business sectors 
+    issue:
+      page_title: Your internal market issue
+      supplement_text_html: | 
+        <div class="govuk-body">
+          <p>Please tell us about your issue, including:</p>
+          <ol class="govuk-list govuk-list--number">
+            <li>the business sectors in which the issue has arisen or is likely to arise</li>
+            <li>the nature of the issue. For example, are your goods or services being refused because they do not comply with regulations in an area of the UK? Do you think unfair conditions are being imposed in relation to the sale of your goods or provision of your services in an area of the UK?</li>
+            <li>if known, the regulations relating to the issue</li>
+            <li>the impact of the issue, including scale and/or duration if known. For example, has business or time been lost as a result of the issue or have costs increased?</li>
+            <li>whether you have already reported the issue to someone else</li>
+          </ol>
+          <div class="govuk-inset-text">
+            <p>You will also be able to upload supporting documentation later in this submission.</p>
+          </div>
+        </div>
+    issue_areas:
+      page_title: Where in the UK is the issue being felt
+    supporting_documents:
+      page_title: Supporting documentation
+      heading: Supporting documentation
+      inset_text_html: |
+        <p>You can provide documents to support your submission:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>upload up to 5 files</li>
+          <li>files can be up to 10 MB</li>
+          <li>most file types are supported (PDF, DOC, Excel, JPG, etc.)</li>
+        </ul>
+
+    summary:
+      page_title: Check your answers
+      heading: Check your answers before sending your report
+      no_files: No documents uploaded
+
+  helpers:
+    legend:
+      issue:
+        reporting_as: I am reporting as
+        area_of_ops: In what areas of the UK do you do business?
+        impact_area: Where in the UK do you consider the issue is being felt?
+    hint:
+      issue:
+        reporting_as_options:
+          other: Provide further details below.
+        impact_area: Select all that apply. Do you consider that the issue is impacting on a particular area of the UK, or more widely?
+        impact_area_options:
+          other: Provide further details below.
+        org_name: If known, please enter your organisation’s legal name.
+        area_of_ops: Select all that apply. For non-trading bodies, what area of the UK do you cover?
+        business_sector: For cross-sector organisations, enter “N/A"
+    label:
+      issue:
+        first_name: First name
+        last_name: Last name
+        email: Email address
+        telephone: Telephone number
+        reporting_as_options:
+          ind: an individual professional or consumer
+          business: a business
+          pb: a professional body, trade association or other business representation organisation
+          tu: a trade union
+          cg: a consumer association
+          other: other
+        reporting_other: Provide additional information, if 'other' selected
+        addr_line_1: Building and street (optional)
+        addr_line_2: Building and street line 2 (optional)
+        addr_town: Town or city
+        addr_county: County (optional)
+        addr_postcode: Postcode
+        org_name: What is the name of your organisation?
+        area_of_ops: Areas of operations
+        area_of_ops_options:
+          england: England
+          ni: Northern Ireland
+          wales: Wales
+          scotland: Scotland
+        business_sector: In what business sectors do you operate?
+        issue: Tell us about your internal market issue
+        impact_area_options:
+          england: England
+          ni: Northern Ireland
+          wales: Wales
+          scotland: Scotland
+          other: Other
+        impact_other: Provide additional information, if 'other' selected
+        documents: Choose a file
+
+

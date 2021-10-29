@@ -1,0 +1,16 @@
+<% title(t('.page_title')) %>
+<%= render partial: 'back_link' %>
+
+<%= form_for @issue, url: report_issue_step_path(params[:id]), :as => :issue do |f| %>
+  <%= f.govuk_error_summary %>
+  <%= f.govuk_fieldset legend: {text: t('.fieldset_legend'), size: 'l', described_by:"hint", tag: 'h1'} do %>
+    <div id="hint" class="govuk-hint">
+      <%= t('.hint_html') %>
+    </div>
+    <%= f.govuk_text_field :first_name, autocomplete: "given-name", width: 'two-thirds' %>
+    <%= f.govuk_text_field :last_name, autocomplete: "family-name", width: 'two-thirds' %>
+    <%= f.govuk_email_field :email, autocomplete:"email", spellcheck:"false", width: 'one-half' %>
+    <%= f.govuk_phone_field :telephone, autocomplete: "tel", width: 'one-third' %>
+  <% end %>
+  <%= f.govuk_submit %>
+<% end %>

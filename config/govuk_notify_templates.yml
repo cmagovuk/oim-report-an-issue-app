@@ -1,0 +1,7 @@
+test:
+  submit_individual: "d63ecc70-9a97-4bcc-93e5-188f3f067fe0"
+  submit_organisation: "986423d1-8de4-4385-945a-b39c71401661"
+
+production:
+  submit_individual: "f6469c3a-0aa1-43e1-bc0d-3477b45dfbfe"
+  submit_organisation: "4712c981-d885-4e7e-b116-3daf1107de33"

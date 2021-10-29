@@ -1,0 +1,6 @@
+---
+applications:
+- name: govuk-oim-report-issue
+  buildpacks:
+    - https://github.com/cloudfoundry/ruby-buildpack.git
+    - https://github.com/cloudfoundry/nodejs-buildpack

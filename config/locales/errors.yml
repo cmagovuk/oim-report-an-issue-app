@@ -1,0 +1,54 @@
+en:
+  errors:
+    upload:
+      file_size_error_message: "%{filename} must be smaller than %{size_limit}"
+      too_many_files_error_message: "You are limited to %{file_uploads} supporting documents"
+      file_type_error_message: "The selected file must be a DOC, DOCX, XLS, XLSX, PPT, PPTX, PDF, JPG, PNG, MP4, MOV or WMV"
+      empty_file_error_message: The selected file is empty
+      no_file_error_message: Select a file to upload
+    contact_details:
+      blank_email_and_phone: Enter your email address or telephone number
+    attributes:
+        first_name:
+          blank: Enter your first name
+          too_long: First name must be %{count} characters or fewer
+        last_name:
+          blank: Enter your last name
+          too_long: Last name must be %{count} characters or fewer
+        email:
+          blank: Enter your email address or telephone number
+          too_long: Email must be %{count} characters or fewer
+          invalid: Enter an email address in the correct format, like name@example.com
+        telephone:
+          blank: Enter your telephone number or email address
+          too_long: Telephone must be %{count} characters or fewer
+          invalid: Enter a telephone number, like 01632 960 001, 07700 900 982 or +44 0808 157 0192
+        reporting_as:
+          blank: Select whether you are reporting as an individual or on behalf of an organisation
+        reporting_other:
+          blank: Enter further information on why you selected 'other'
+        addr_line_1:
+          too_long: Building and street must be %{count} characters or fewer
+        addr_line_2:
+          too_long: Building and street line 2 must be %{count} characters or fewer
+        addr_town:
+          too_long: Town or city must be %{count} characters or fewer
+          blank: Enter the town or city
+        addr_county:
+          too_long: County must be %{count} characters or fewer
+        addr_postcode:
+          too_long: Postcode must be %{count} characters or fewer
+          blank: Enter the Postcode
+        org_name:
+          blank: Enter your Organisation name
+          too_long: Organisation name must be %{count} characters or fewer
+        business_sector:
+          blank: Enter at least one business sector in which your organisation operates
+        impact_area:
+          blank: Select at least one area
+        area_of_ops:
+          blank: Select at least one area
+        impact_other:
+          blank: Enter further information on why you selected 'other'
+        issue:
+          blank: Enter information about the issue

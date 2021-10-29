@@ -1,0 +1,24 @@
+<% title(t('.page_title')) %>
+<%= render partial: 'back_link' %>
+<h1 class="govuk-heading-l">
+  <%= t('.heading') -%>
+</h1>
+<% if t('.inset_text_html', default: "NoText") != "NoText" %>
+<div class="govuk-inset-text">
+  <%= t('.inset_text_html') -%>
+</div>
+<% end %>
+<%= form_for @issue, url: report_issue_step_path(params[:id]), :as => :issue do |f| %>
+  <%= f.govuk_error_summary %>
+  <%= f.govuk_file_field :documents,
+          accept: ".doc, .docx, .xls, .xlsx, .ppt, .pptx, .pdf, image/jpeg, image/png, .mp4, .mov, .wmv",
+          multiple: false,
+          enctype: "multipart/form-data",
+          class: "upload-input" %>
+  <%= f.govuk_submit t("buttons.upload_files"), secondary: true, classes: "upload-files-button" %>
+  <%= render 'document_list' %>
+<% end %>
+<%= form_for @issue, url: report_issue_step_path(params[:id]), html: {id: "continue_form"}, :as => :issue do |f| %>
+  <%= f.hidden_field :continue%>
+  <%= f.govuk_submit classes: "upload-continue-button" %>
+<% end %>
