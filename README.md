@@ -1,4 +1,4 @@
-# Report UK Internal Market issue
+# Report issue to the Office of the Internal Market
 
 ## Development VM
 Development has been done on a Hyper-V VM built via the Quick Create Action, Ubuntu 20.04 Operating System.
