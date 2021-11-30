@@ -172,7 +172,7 @@ en:
           business: a business
           pb: a professional body, trade association or other business representation organisation
           tu: a trade union
-          cg: a consumer association
+          cg: a consumer protection body
           other: other
         reporting_other: Provide additional information, if 'other' selected
         addr_line_1: Building and street (optional)
