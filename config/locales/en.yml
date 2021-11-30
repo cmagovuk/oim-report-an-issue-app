@@ -133,7 +133,7 @@ en:
       page_title: Supporting documentation
       heading: Supporting documentation
       inset_text_html: |
-        <p>You can provide documents to support your submission:</p>
+        <p>You may provide documents to support your submission:</p>
         <ul class="govuk-list govuk-list--bullet">
           <li>upload up to 5 files</li>
           <li>files can be up to 10 MB</li>
