@@ -17,7 +17,7 @@ RSpec.feature "View pages", type: :feature do
         visit "/"
 
         click_link "Continue"
-        expect(page).to have_text("Name and contact")
+        expect(page).to have_text("I am reporting as")
       end
     end
   end

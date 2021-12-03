@@ -1,6 +1,6 @@
 module ReportIssueStepsHelper
-  ORG_STEPS = %w[contact_details reporting_as org_name address org_area org_sector issue issue_areas supporting_documents summary].freeze
-  IND_STEPS = %w[contact_details reporting_as address issue issue_areas supporting_documents summary].freeze
+  ORG_STEPS = %w[reporting_as org_name postcode org_area org_sector issue issue_areas supporting_documents contact_details summary].freeze
+  IND_STEPS = %w[reporting_as postcode issue issue_areas supporting_documents contact_details summary].freeze
   UPLOAD_STEPS = "%w[supporting_documents]".freeze
 
   def step_model

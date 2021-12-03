@@ -3,18 +3,13 @@
   <div class="govuk-grid-column-two-thirds-from-desktop">
     <h1 class="govuk-heading-l"><%= t('.heading') -%></h1>
 
-    <h2 class="govuk-heading-m">Personal details</h2>
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-      <%= render 'summary_line', {key: "First name", value:@issue.first_name, step: 'contact_details'} %>
-      <%= render 'summary_line', {key: "Last name", value:@issue.last_name, step: 'contact_details'} %>
-      <%= render 'summary_line', {key: "Email address", value:@issue.email, step: 'contact_details'} %>
-      <%= render 'summary_line', {key: "Telephone number", value:@issue.telephone, step: 'contact_details'} %>
       <%= render 'summary_line', {key: "Reporting as", value:t(@issue.reporting_as&.to_sym, scope: [:helpers, :label, :issue, :reporting_as_options]), step: 'reporting_as'} %>
       <% if @issue.reporting_as&.include?('other') %>
         <%= render 'summary_line', {key: "Reporting as other", value:truncate_text(@issue.reporting_other), step: 'reporting_as'} %>
       <% end %>
       <% if @issue.individual_reporting? %>
-        <%= render 'multi_value_line', {key: "Address", value:@issue.formatted_address, step: 'address'} %>
+        <%= render 'summary_line', {key: "Postcode", value:@issue.addr_postcode, step: 'postcode'} %>
       <% end %>
     </dl>
 
@@ -22,7 +17,7 @@
       <h2 class="govuk-heading-m">Organisation details</h2>
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <%= render 'summary_line', {key: "Organisation name", value:@issue.org_name, step: 'org_name'} %>
-        <%= render 'multi_value_line', {key: "Address", value:@issue.formatted_address, step: 'address'} %>
+        <%= render 'summary_line', {key: "Postcode", value:@issue.addr_postcode, step: 'postcode'} %>
         <%= render 'multi_value_line', {key: "Areas of operation", value:@issue.area_of_ops_text, step: 'org_area'} %>
         <%= render 'summary_line', {key: "Operating sector", value:truncate_text(@issue.business_sector), step: 'org_sector'} %>
       </dl>
@@ -40,6 +35,14 @@
     <h2 class="govuk-heading-m">Supporting documents</h2>
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <%= render 'multi_value_line', {key: "Uploaded documents", value:get_filenames(@issue.supporting_docs), step: 'supporting_documents'} %>
+    </dl>
+
+    <h2 class="govuk-heading-m">Contact details</h2>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <%= render 'summary_line', {key: "First name", value:@issue.first_name, step: 'contact_details'} %>
+      <%= render 'summary_line', {key: "Last name", value:@issue.last_name, step: 'contact_details'} %>
+      <%= render 'summary_line', {key: "Email address", value:@issue.email, step: 'contact_details'} %>
+      <%= render 'summary_line', {key: "Telephone number", value:@issue.telephone, step: 'contact_details'} %>
     </dl>
   </div>
 </div>

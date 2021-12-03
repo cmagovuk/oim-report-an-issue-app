@@ -1,11 +1,11 @@
 require "rails_helper"
-ORG_STEPS = %w[contact_details reporting_as org_name address org_area org_sector issue issue_areas supporting_documents summary].freeze
-IND_STEPS = %w[contact_details reporting_as address issue issue_areas supporting_documents summary].freeze
+ORG_STEPS = %w[reporting_as org_name postcode org_area org_sector issue issue_areas supporting_documents contact_details summary].freeze
+IND_STEPS = %w[reporting_as postcode issue issue_areas supporting_documents contact_details summary].freeze
 
 RSpec.describe ReportIssueStepsHelper, type: :helper do
   describe "#first_step" do
     it "returns the first step" do
-      expect(helper.first_step).to eq "contact_details"
+      expect(helper.first_step).to eq "reporting_as"
     end
   end
 
@@ -109,7 +109,7 @@ RSpec.describe ReportIssueStepsHelper, type: :helper do
     it "returns next missing step" do
       issue = ReportIssue.new(reporting_as: "business", completed_steps: %w[contact_details reporting_as org_name issue issue_areas].freeze)
       assign(:step_model, issue)
-      expect(helper.missed_step).to eq "address"
+      expect(helper.missed_step).to eq "postcode"
     end
 
     it "returns nil if all steps completed" do

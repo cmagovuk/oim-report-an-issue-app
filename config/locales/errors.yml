@@ -38,7 +38,7 @@ en:
           too_long: County must be %{count} characters or fewer
         addr_postcode:
           too_long: Postcode must be %{count} characters or fewer
-          blank: Enter the Postcode
+          blank: Enter your postcode
         org_name:
           blank: Enter your Organisation name
           too_long: Organisation name must be %{count} characters or fewer

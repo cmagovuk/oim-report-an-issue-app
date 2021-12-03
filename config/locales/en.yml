@@ -31,7 +31,7 @@
 
 en:
   service: 
-    name: "Report UK Internal Market Issue"
+    name: "Report an issue with the UK's Internal Market"
     
   link:
     back: Back
@@ -102,6 +102,8 @@ en:
       page_title: I am reporting as
     org_name:
       page_title: Name of your organisation
+    postcode:
+      page_title: Postcode
     address:
       page_title: Your address
       heading: Your address
@@ -115,25 +117,26 @@ en:
       page_title: Your internal market issue
       supplement_text_html: | 
         <div class="govuk-body">
-          <p>Please tell us about your issue, including:</p>
+          <p>Describe the issue in full, including:</p>
           <ol class="govuk-list govuk-list--number">
-            <li>the business sectors in which the issue has arisen or is likely to arise</li>
-            <li>the nature of the issue. For example, are your goods or services being refused because they do not comply with regulations in an area of the UK? Do you think unfair conditions are being imposed in relation to the sale of your goods or provision of your services in an area of the UK?</li>
-            <li>if known, the regulations relating to the issue</li>
-            <li>the impact of the issue, including scale and/or duration if known. For example, has business or time been lost as a result of the issue or have costs increased?</li>
-            <li>whether you have already reported the issue to someone else</li>
+            <li>The sectors this affects, or could affect.</li>
+            <li>The nature of the issue (for example, if your goods or services are being refused because they do not comply with regulations in an area of the UK, or you think unfair conditions are being imposed in relation to the sale of goods or provision of your services in an area of the UK).</li>
+            <li>The impact of the issue, including the scale and duration if known.</li>
+            <li>Any relevant regulations.</li>
+            <li>If you have reported this issue to another regulator or elsewhere.</li>
           </ol>
           <div class="govuk-inset-text">
-            <p>You will also be able to upload supporting documentation later in this submission.</p>
+            <p>Any additional evidence to support your issue can be uploaded later in the submission.</p>
           </div>
         </div>
     issue_areas:
-      page_title: Where in the UK is the issue being felt
+      page_title: Where are people experiencing the impact 
     supporting_documents:
       page_title: Supporting documentation
       heading: Supporting documentation
       inset_text_html: |
-        <p>You may provide documents to support your submission:</p>
+        <p>You may provide evidence to support your submission.</p>
+        <p>If you do not have additional evidence, select continue below.</p>
         <ul class="govuk-list govuk-list--bullet">
           <li>upload up to 5 files</li>
           <li>files can be up to 10 MB</li>
@@ -141,8 +144,8 @@ en:
         </ul>
 
     summary:
-      page_title: Check your answers
-      heading: Check your answers before sending your report
+      page_title: Review your submission
+      heading: Review your submission
       no_files: No documents uploaded
 
   helpers:
@@ -150,11 +153,12 @@ en:
       issue:
         reporting_as: I am reporting as
         area_of_ops: In what areas of the UK do you do business?
-        impact_area: Where in the UK do you consider the issue is being felt?
+        impact_area: Where in the UK are people experiencing the impact of this issue?
     hint:
       issue:
         reporting_as_options:
           other: Provide further details below.
+        addr_postcode: If you are reporting in a professional capacity, enter the postcode of your business. Knowing where you are based provides context for your submission.
         impact_area: Select all that apply. Do you consider that the issue is impacting on a particular area of the UK, or more widely?
         impact_area_options:
           other: Provide further details below.
@@ -179,7 +183,7 @@ en:
         addr_line_2: Building and street line 2 (optional)
         addr_town: Town or city
         addr_county: County (optional)
-        addr_postcode: Postcode
+        addr_postcode: What is your postcode?
         org_name: What is the name of your organisation?
         area_of_ops: Areas of operations
         area_of_ops_options:

@@ -27,12 +27,12 @@ RSpec.describe ApplicationHelper, type: :helper do
 
     context "for a blank value" do
       let(:value) { "" }
-      it { expect(title).to eq("Report UK Internal Market Issue - GOV.UK") }
+      it { expect(title).to eq("Report an issue with the UK&#39;s Internal Market - GOV.UK") }
     end
 
     context "for a given page" do
       let(:value) { "Test Page" }
-      it { expect(title).to eq("Test Page - Report UK Internal Market Issue - GOV.UK") }
+      it { expect(title).to eq("Test Page - Report an issue with the UK&#39;s Internal Market - GOV.UK") }
     end
   end
 
