@@ -1,7 +1,6 @@
 module ReportIssueStepsHelper
   ORG_STEPS = %w[reporting_as org_name postcode org_area org_sector issue issue_areas supporting_documents contact_details summary].freeze
   IND_STEPS = %w[reporting_as postcode issue issue_areas supporting_documents contact_details summary].freeze
-  UPLOAD_STEPS = "%w[supporting_documents]".freeze
 
   def step_model
     sub_class = begin
@@ -88,10 +87,6 @@ module ReportIssueStepsHelper
       get_filenames.push(t("report_issue_steps.summary.no_files"))
     end
     get_filenames
-  end
-
-  def upload_step?
-    UPLOAD_STEPS.include? step
   end
 
   def completed_steps?

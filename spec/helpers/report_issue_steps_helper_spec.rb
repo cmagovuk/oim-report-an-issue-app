@@ -49,18 +49,6 @@ RSpec.describe ReportIssueStepsHelper, type: :helper do
     end
   end
 
-  describe "#upload_step?" do
-    it "returns true if not a upload step" do
-      assign(:step, "supporting_documents")
-      expect(helper).to be_upload_step
-    end
-
-    it "returns false if not a upload step" do
-      assign(:step, "contact_details")
-      expect(helper).to_not be_upload_step
-    end
-  end
-
   describe "#step_set" do
     it "excludes organisation pages when individual" do
       issue = ReportIssue::ReportingAs.new(reporting_as: "ind")

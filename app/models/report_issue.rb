@@ -18,6 +18,10 @@ class ReportIssue < ApplicationRecord
     permitted.empty?
   end
 
+  def upload_step?
+    false
+  end
+
   def formatted_address
     remove_blanks addr_line_1, addr_line_2, addr_town, addr_county, addr_postcode
   end

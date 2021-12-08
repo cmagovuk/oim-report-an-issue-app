@@ -12,7 +12,7 @@ class ReportIssueStepsController < ApplicationController
   end
 
   def update
-    if upload_step?
+    if step_model.upload_step?
       process_upload
     elsif step_model.info_only? || step_model.update(form_params)
       update_completed_steps

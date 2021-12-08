@@ -27,6 +27,10 @@ class ReportIssue::SupportingDocuments < ReportIssue
     true
   end
 
+  def upload_step?
+    true
+  end
+
 private
 
   def valid_file_size?(document)
