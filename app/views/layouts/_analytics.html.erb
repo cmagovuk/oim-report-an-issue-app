@@ -1,5 +1,5 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=<%= analytics_tracking_id %>"></script>
-<script>
+<%= javascript_tag nonce: true do -%>
   <% unless cookie_settings['analytics'] %>
   window["ga-disable-<%= analytics_tracking_id %>"] = true
   <% end %>
@@ -7,5 +7,5 @@
   function gtag(){dataLayer.push(arguments);}   
   gtag('js', new Date());
 
-  gtag('config', '<%= analytics_tracking_id %>', {'anonymize_ip': true});
-</script>
+  gtag('config', '<%= analytics_tracking_id %>', {'anonymize_ip': true, cookie_flags: 'SameSite=None;Secure'});
+<% end -%>
