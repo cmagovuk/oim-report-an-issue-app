@@ -12,14 +12,8 @@ $govuk-image-url-function: frontend-image-url;
 @import "~govuk-frontend/govuk/all";
 
 @media only screen and (max-width: 520px) {
-  .hide-col {
+  .app-hide-col {
     display: none;
-  }
-
-  // Accessibility change to confirmation panel
-  .app-confirmation-panel {
-    padding-left: 0px;
-    padding-right: 0px;
   }
 }
 
