@@ -44,8 +44,12 @@ private
 
   def process_upload
     if params.key?(:doc_id)
-      document = step_model.supporting_docs.find(params[:doc_id])
-      document.purge
+      begin
+        document = step_model.supporting_docs.find(params[:doc_id])
+        document.purge
+      rescue ActiveRecord::RecordNotFound
+        # Document already removed, do nothing and redirect back
+      end
       redirect_to edit_report_issue_step_path(step)
 
     elsif params.key?(:issue)
