@@ -1,15 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-    onceClicked = () => {
-        var alreadyClicked = false;
-        return ((e) => {
-            if (alreadyClicked) {
-                e.preventDefault();
-                return false;
-            }
-            else {
-                alreadyClicked = true;
-            }
-        });
+    var alreadyClicked = false;
+
+    onceClicked = (e) => {
+        if (alreadyClicked) {
+            e.preventDefault();
+            return false;
+        }
+        alreadyClicked = true;
     };
 
     const inputFileUpload = document.getElementsByClassName("upload-input")[0];
@@ -30,6 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (submissionButton) {
-        submissionButton.addEventListener('click', onceClicked());
+        submissionButton.addEventListener('click', onceClicked);
+        addEventListener('pageshow', (e) => {
+            alreadyClicked = false;
+        });
     }
 });
