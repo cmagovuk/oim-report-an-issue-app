@@ -34,7 +34,7 @@
 
     <h2 class="govuk-heading-m">Supporting documents</h2>
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-      <%= render 'multi_value_line', {key: "Uploaded documents", value:get_filenames(@issue.supporting_docs), step: 'supporting_documents'} %>
+      <%= render 'multi_value_line', {key: "Uploaded documents", value:@issue.get_filenames, step: 'supporting_documents'} %>
     </dl>
 
     <h2 class="govuk-heading-m">Contact details</h2>

@@ -26,6 +26,18 @@ class ReportIssue < ApplicationRecord
     remove_blanks addr_line_1, addr_line_2, addr_town, addr_county, addr_postcode
   end
 
+  def get_filenames
+    get_filenames = []
+    if supporting_docs.attached?
+      supporting_docs.each do |single|
+        get_filenames.push(single.filename)
+      end
+    else
+      get_filenames.push(I18n.t("report_issue_steps.summary.no_files"))
+    end
+    get_filenames
+  end
+
   def contact_details
     remove_blanks "#{first_name} #{last_name}", email, telephone
   end

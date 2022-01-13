@@ -1,6 +1,6 @@
 test:
-  submit_individual: "d63ecc70-9a97-4bcc-93e5-188f3f067fe0"
-  submit_organisation: "986423d1-8de4-4385-945a-b39c71401661"
+  submit_individual: "4c80e104-4980-43f7-97bd-5d79295e628d"
+  submit_organisation: "6e093b46-cc82-4925-82f1-6c46ff5a4849"
 
 production:
   submit_individual: "f6469c3a-0aa1-43e1-bc0d-3477b45dfbfe"
