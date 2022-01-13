@@ -77,18 +77,6 @@ module ReportIssueStepsHelper
     truncate(text, separator: " ", length: 260)
   end
 
-  def get_filenames(active_storage_attachments)
-    get_filenames = []
-    if active_storage_attachments.attached?
-      active_storage_attachments.each do |single|
-        get_filenames.push(single.filename)
-      end
-    else
-      get_filenames.push(t("report_issue_steps.summary.no_files"))
-    end
-    get_filenames
-  end
-
   def completed_steps?
     uncompleted_steps.empty?
   end
