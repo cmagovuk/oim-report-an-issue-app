@@ -40,8 +40,8 @@ class ReportIssues::StepWorkflow
   end
 
   def previous_step
-    if completed_steps?
-      step_set.last unless step == step_set.last
+    if completed_steps? && step != step_set.last
+      step_set.last
     else
       current_step_index = step_set.index(step)
       previous_step_index = current_step_index - 1
