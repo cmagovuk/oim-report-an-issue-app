@@ -46,6 +46,7 @@ module GovukOimReportIssue
     config.x.link_about_oim = ENV["LINK_ABOUT_OIM"]
     config.x.link_statement = ENV["LINK_STATEMENT"]
     config.x.feedback_email = ENV["FEEDBACK_EMAIL"]
+    config.x.feedback_form = ENV["FEEDBACK_FORM"]
     config.x.maintenance_text = ENV["MAINTENANCE_TEXT"]
     config.x.link_start_page = ENV["LINK_START_PAGE"]
   end
