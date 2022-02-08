@@ -53,6 +53,7 @@ The application requires the following environment variables to be configured
 | Name | Purpose |
 | --- | --- |
 | **FEEDBACK_EMAIL** | email address for feedback emails
+| **FEEDBACK_FORM** | Url for feedback form
 | **GA_TRACKING_ID** | Google Analytics ID
 | **GOVUK_NOTIFY_API_KEY** | Key to GOV.UK Notify
 | **GOVUK_NOTIFY_ENV** | GOV.UK Notify template set
