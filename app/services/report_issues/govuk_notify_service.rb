@@ -11,13 +11,14 @@ class ReportIssues::GovukNotifyService
           submitter_name: "#{issue.first_name} #{issue.last_name}",
           reference_number: issue.reference_number,
           contact_details: issue.contact_details.join("\n"),
-          address: issue.formatted_address.join("\n"),
+          postcode: issue.addr_postcode,
           reporting_as: issue.reporting_as_data.join("\n"),
           organisation_name: issue.org_name,
           organisation_areas: issue.area_of_ops_text.join(", "),
           issue: issue.issue,
           issue_impact_areas: issue.issue_areas_data.join("\n"),
           operating_sector: issue.business_sector,
+          documents: issue.get_filenames.join("\n"),
         },
       )
 

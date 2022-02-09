@@ -11,4 +11,10 @@ RSpec.describe ReportIssue::OrgName, type: :model do
       expect(subject).to_not be_info_only
     end
   end
+
+  describe "#upload_step?" do
+    it "must not be upload step" do
+      expect(subject).to_not be_upload_step
+    end
+  end
 end

@@ -1,6 +1,6 @@
 <tr class="govuk-table__row">
   <td class="govuk-table__cell"><%=document.filename %></td>
-  <td class="govuk-table__cell hide-col"><%= number_to_human_size(document.byte_size) %></td>
+  <td class="govuk-table__cell app-hide-col"><%= number_to_human_size(document.byte_size) %></td>
   <td class="govuk-table__cell">
     <%= link_to edit_report_issue_step_path(step, doc_id: document.id), method: :put, class: 'govuk-link' do %>
       Remove<span class="govuk-visually-hidden"> file <%= document.filename %></span>

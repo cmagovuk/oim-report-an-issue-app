@@ -43,11 +43,17 @@ RSpec.describe ReportIssue::ContactDetails, type: :model do
       subject = described_class.new(first_name: "First", last_name: "Last", email: "name@company.com", telephone: "01632 960 001")
       expect(subject).to be_valid
     end
+  end
 
-    describe "#info_only?" do
-      it "must not be info only view" do
-        expect(subject).to_not be_info_only
-      end
+  describe "#info_only?" do
+    it "must not be info only view" do
+      expect(subject).to_not be_info_only
+    end
+  end
+
+  describe "#upload_step?" do
+    it "must not be upload step" do
+      expect(subject).to_not be_upload_step
     end
   end
 end

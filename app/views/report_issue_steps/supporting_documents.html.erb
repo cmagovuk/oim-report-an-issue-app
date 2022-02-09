@@ -11,7 +11,7 @@
 <%= form_for @issue, url: report_issue_step_path(params[:id]), :as => :issue do |f| %>
   <%= f.govuk_error_summary %>
   <%= f.govuk_file_field :documents,
-          accept: ".doc, .docx, .xls, .xlsx, .ppt, .pptx, .pdf, image/jpeg, image/png, .mp4, .mov, .wmv",
+          accept: ".doc, .docx, .xls, .xlsx, .ppt, .pptx, .pdf, image/jpeg, image/png, .mp4, .mov, .wmv, .eml, .msg",
           multiple: false,
           enctype: "multipart/form-data",
           class: "upload-input" %>

@@ -12,6 +12,8 @@ class ReportIssue::SupportingDocuments < ReportIssue
     application/vnd.openxmlformats-officedocument.wordprocessingml.document
     application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
     application/vnd.openxmlformats-officedocument.presentationml.presentation
+    message/rfc822
+    application/octet-stream
   ].freeze
 
   FILE_SIZE_LIMIT = 10.megabytes
@@ -20,10 +22,14 @@ class ReportIssue::SupportingDocuments < ReportIssue
   attr_accessor :documents, :continue
 
   def valid_document?(doc)
-    @valid_document ||= !too_many_files? && valid_file_size?(doc) && valid_file_type?(doc) && non_empty_file?(doc)
+    @valid_document ||= !too_many_files? && valid_file_size?(doc) && valid_file_type?(doc) && non_empty_file?(doc) && octet_checks?(doc)
   end
 
   def info_only?
+    true
+  end
+
+  def upload_step?
     true
   end
 
@@ -62,6 +68,15 @@ private
 
   def valid_file_type?(document)
     return true if CONTENT_TYPES_ALLOWED.include?(document.content_type)
+
+    errors.add(:documents, I18n.t("errors.upload.file_type_error_message", filename: document.original_filename))
+    false
+  end
+
+  def octet_checks?(document)
+    # Only allow octet-stream if it's an msg file
+    return true unless document.content_type == "application/octet-stream"
+    return true if document.original_filename.downcase.ends_with?("msg")
 
     errors.add(:documents, I18n.t("errors.upload.file_type_error_message", filename: document.original_filename))
     false

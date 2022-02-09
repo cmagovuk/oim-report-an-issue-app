@@ -40,6 +40,17 @@ module ApplicationHelper
     end
   end
 
+  def final_feedback_link(name)
+    if Rails.application.config.x.feedback_form.present?
+      html_options = {
+        class: "govuk-link govuk-link--no-visited-state",
+      }
+      link_to name, Rails.application.config.x.feedback_form, html_options
+    else
+      feedback_link(name)
+    end
+  end
+
   def path_only(url)
     return nil if url.nil?
 

@@ -3,7 +3,7 @@ en:
     upload:
       file_size_error_message: "%{filename} must be smaller than %{size_limit}"
       too_many_files_error_message: "You are limited to %{file_uploads} supporting documents"
-      file_type_error_message: "The selected file must be a DOC, DOCX, XLS, XLSX, PPT, PPTX, PDF, JPG, PNG, MP4, MOV or WMV"
+      file_type_error_message: "The selected file must be a DOC, DOCX, XLS, XLSX, PPT, PPTX, PDF, JPG, PNG, MSG, EML, MP4, MOV or WMV"
       empty_file_error_message: The selected file is empty
       no_file_error_message: Select a file to upload
     contact_details:
