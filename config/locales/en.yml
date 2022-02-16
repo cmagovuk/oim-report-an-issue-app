@@ -32,7 +32,11 @@
 en:
   service: 
     name: "Report an issue with the UK's Internal Market"
-    
+
+  services:
+    govuk_notify_service:
+      anonymous_username: "user"
+ 
   link:
     back: Back
 
@@ -97,13 +101,15 @@ en:
     contact_details:
       page_title: Name and contact details
       fieldset_legend: Name and contact details
-      hint_html: Enter your name along with your email address and/or telephone number.
+      hint_html: <p>Enter your name along with your email address and/or telephone number.</p><p>These fields are optional. If you do not provide contact details, the OIM cannot respond to your submission. We will also be unable to ask you any follow-up questions, which makes it harder for us to verify the information and use it in our reports.</p>
     reporting_as:
       page_title: I am reporting as
     org_name:
       page_title: Name of your organisation
+      hint_html: <p>If known, please enter your organisation's legal name.</p><p>If you do not want to provide your organisation name, leave this field blank. You can enter your name and contact details later in the form. If you choose to remain anonymous, we will be unable to respond to your submission or ask you any follow-up questions, which makes it harder for us to verify the information and use it in our reports.</p>
     postcode:
       page_title: Postcode
+      hint_html: <p>If you are reporting in a professional capacity, enter the postcode of your business.</p><p>Knowing where you are based provides context for your submission. If you do not want to provide your full postcode, you can enter the area code (ie. the first half) only.</p>
     address:
       page_title: Your address
       heading: Your address
@@ -158,11 +164,9 @@ en:
       issue:
         reporting_as_options:
           other: Provide further details below.
-        addr_postcode: If you are reporting in a professional capacity, enter the postcode of your business. Knowing where you are based provides context for your submission.
         impact_area: Select all that apply. Do you consider that the issue is impacting on a particular area of the UK, or more widely?
         impact_area_options:
           other: Provide further details below.
-        org_name: If known, please enter your organisation’s legal name.
         area_of_ops: Select all that apply. For non-trading bodies, what area of the UK do you cover?
         business_sector: For cross-sector organisations, enter “N/A"
     label:

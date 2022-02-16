@@ -8,7 +8,7 @@ class ReportIssues::GovukNotifyService
         email_address: issue.email,
         template_id: template_id,
         personalisation: {
-          submitter_name: "#{issue.first_name} #{issue.last_name}",
+          submitter_name: submitter_name(issue),
           reference_number: issue.reference_number,
           contact_details: issue.contact_details.join("\n"),
           postcode: issue.addr_postcode,
@@ -34,5 +34,13 @@ class ReportIssues::GovukNotifyService
 
   private_class_method def self.api_key
     @api_key || ENV["GOVUK_NOTIFY_API_KEY"]
+  end
+
+  private_class_method def self.submitter_name(issue)
+    if issue.first_name.blank? || issue.last_name.blank?
+      I18n.t("services.govuk_notify_service.anonymous_username")
+    else
+      "#{issue.first_name} #{issue.last_name}"
+    end
   end
 end
