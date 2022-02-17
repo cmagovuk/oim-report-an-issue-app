@@ -3,6 +3,9 @@
 
 <%= form_for @issue, url: report_issue_step_path(params[:id]), :as => :issue do |f| %>
   <%= f.govuk_error_summary %> 
-  <%= f.govuk_text_field :addr_postcode, autocomplete: "postal-code", spellcheck:"false", width: 10, label: {size: 'l', tag: 'h1'} %>
+  <%= f.govuk_text_field :addr_postcode, autocomplete: "postal-code", spellcheck:"false", width: 10, label: {size: 'l', tag: 'h1'}, hint: -> do  %>
+    <%= t('.hint_html') -%>
+  <% end %>
+
   <%= f.govuk_submit %>
 <% end %>

@@ -2,9 +2,6 @@ require "rails_helper"
 
 RSpec.describe ReportIssue::ContactDetails, type: :model do
   describe "validations" do
-    it { should validate_presence_of(:first_name) }
-    it { should validate_presence_of(:last_name) }
-
     it { should validate_length_of(:first_name).is_at_most(255) }
     it { should validate_length_of(:last_name).is_at_most(255) }
     it { should validate_length_of(:email).is_at_most(255) }
@@ -24,9 +21,9 @@ RSpec.describe ReportIssue::ContactDetails, type: :model do
     it { should_not allow_value("++44 0808 157 0192").for(:telephone) }
     it { should_not allow_value("Who you going to call?").for(:telephone) }
 
-    it "is not valid unless a email or phone number is present" do
-      subject = described_class.new(first_name: "First", last_name: "Last")
-      expect(subject).to_not be_valid
+    it "is valid with no data" do
+      subject = described_class.new
+      expect(subject).to be_valid
     end
 
     it "is valid with email and no phone number" do
