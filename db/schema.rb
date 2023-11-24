@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_09_112537) do
+ActiveRecord::Schema.define(version: 2023_11_06_111358) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -69,6 +69,11 @@ ActiveRecord::Schema.define(version: 2021_08_09_112537) do
     t.text "impact_other"
     t.string "completed_steps"
     t.string "reference_number"
+    t.text "issue_sector"
+    t.text "issue_description"
+    t.text "issue_impact"
+    t.text "issue_regs"
+    t.text "issue_reported"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

@@ -135,6 +135,48 @@ en:
             <p>Any additional evidence to support your issue can be uploaded later in the submission.</p>
           </div>
         </div>
+    issue_sector:
+      page_title: Sectors affected by your issue
+      supplement_text_html: |
+        <div class="govuk-hint">Describe the sectors this issue affects, or could affect.</div>
+        <div class="govuk-inset-text">
+          <p>Any additional evidence to support your issue can be uploaded later in the submission.</p>
+        </div>
+    issue_describe:
+      page_title: Describe your issue
+      supplement_text_html: |
+        <div class="govuk-hint">
+          <p>Describe the nature of the issue. For example:</p>
+          <ol class="govuk-hint govuk-list govuk-list--bullet">
+            <li>your goods or services are being refused because they do not comply with regulations in an area of the UK</li>
+            <li>you think unfair conditions are being imposed in relation to the sale of goods or provision of your services in an area of the UK</li>
+          </ol>
+          <div class="govuk-inset-text">
+            <p>Any additional evidence to support your issue can be uploaded later in the submission.</p>
+          </div>
+        </div>
+    issue_impact:
+      page_title: What is the impact of your issue
+      supplement_text_html: |
+        <div class="govuk-hint">Describe the impact of the issue, including the scale and duration if known.</div>
+        <div class="govuk-inset-text">
+          <p>Any additional evidence to support your issue can be uploaded later in the submission.</p>
+        </div>
+    issue_regs:
+      page_title: Relevant regulations
+      supplement_text_html: |
+        <div class="govuk-hint">Provide details of any relevant regulations.</div>
+        <div class="govuk-inset-text">
+          <p>Any additional evidence to support your issue can be uploaded later in the submission.</p>
+        </div>
+    issue_reported:
+      page_title: Issue reported
+      supplement_text_html: |
+        <div class="govuk-hint">Tell us if you already have reported this issue to another regulator or an organisation, such as a trade association or professional body.</div>
+        <div class="govuk-hint">Please name the regulator or organisation below.</div>
+        <div class="govuk-inset-text">
+          <p>Any additional evidence to support your issue can be uploaded later in the submission.</p>
+        </div>
     issue_areas:
       page_title: Where are people experiencing the impact 
     supporting_documents:
@@ -197,6 +239,11 @@ en:
           scotland: Scotland
         business_sector: In what business sectors do you operate?
         issue: Tell us about your internal market issue
+        issue_sector: Tell us about the sectors affected by your internal market issue
+        issue_description: Describe your internal market issue
+        issue_impact: What is the impact of your internal market issue?
+        issue_regs: Are there any regulations relevant to your internal market issue?
+        issue_reported: Have you reported this issue to another regulator or organisation?
         impact_area_options:
           england: England
           ni: Northern Ireland

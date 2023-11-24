@@ -52,3 +52,13 @@ en:
           blank: Enter further information on why you selected 'other'
         issue:
           blank: Enter information about the issue
+        issue_sector:
+          blank: Enter information about the sectors affected by your issue
+        issue_description:
+          blank: Enter information about the issue
+        issue_impact:
+          blank: Enter information about the impact of your issue
+        issue_regs:
+          blank: Enter information about any regulations relevant to your issue
+        issue_reported:
+          blank: Enter information about any regulator or organisation you have reported your issue

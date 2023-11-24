@@ -27,7 +27,11 @@
 
     <h2 class="govuk-heading-m">Your internal market issue</h2>
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-      <%= render 'summary_line', {key: "Issue description", value:truncate_text(@issue.issue), step: 'issue'} %>
+      <%= render 'summary_line', {key: "Sectors affected", value:truncate_text(@issue.issue_sector), step: 'issue_sector'} %>
+      <%= render 'summary_line', {key: "Issue description", value:truncate_text(@issue.issue_description), step: 'issue_describe'} %>
+      <%= render 'summary_line', {key: "Impact of issue", value:truncate_text(@issue.issue_impact), step: 'issue_impact'} %>
+      <%= render 'summary_line', {key: "Relevant regulations", value:truncate_text(@issue.issue_regs), step: 'issue_regs'} %>
+      <%= render 'summary_line', {key: "Other organisations reported", value:truncate_text(@issue.issue_reported), step: 'issue_reported'} %>
       <%= render 'multi_value_line', {key: "Issue areas", value:@issue.issue_areas_text, step: 'issue_areas'} %>
       <% if @issue.impact_area.include?('other')%>
         <%= render 'summary_line', {key: "Details of other issue area", value:truncate_text(@issue.impact_other), step: 'issue_areas'} %>

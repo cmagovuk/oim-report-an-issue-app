@@ -1,8 +1,8 @@
 class ReportIssues::StepWorkflow
   attr_reader :request
 
-  ORG_STEPS = %w[reporting_as org_name postcode org_area org_sector issue issue_areas supporting_documents contact_details summary].freeze
-  IND_STEPS = %w[reporting_as postcode issue issue_areas supporting_documents contact_details summary].freeze
+  ORG_STEPS = %w[reporting_as org_name postcode org_area org_sector issue_sector issue_describe issue_impact issue_regs issue_reported issue_areas supporting_documents contact_details summary].freeze
+  IND_STEPS = %w[reporting_as postcode issue_sector issue_describe issue_impact issue_regs issue_reported issue_areas supporting_documents contact_details summary].freeze
 
   def initialize(request)
     @request = request
