@@ -3,8 +3,7 @@
 
 <%= form_for @issue, url: report_issue_step_path(params[:id]), :as => :issue do |f| %>
   <%= f.govuk_error_summary %>
-  <%= f.govuk_text_area :issue_impact, label: {size: 'l', tag: 'h1'}, rows: 8 do  %>
-    <%= t('.supplement_text_html') -%>
-  <% end %>
+  <span class="govuk-caption-l"><%= t('.caption') %></span>
+  <%= f.govuk_text_area :issue_impact, label: {size: 'l', tag: 'h1'}, rows: 8 %>
   <%= f.govuk_submit %>
 <% end %>

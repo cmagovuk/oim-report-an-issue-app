@@ -6,7 +6,7 @@ class ReportIssue < ApplicationRecord
   serialize :completed_steps, Array
 
   def individual_reporting?
-    reporting_as == "ind" || reporting_as == "other"
+    reporting_as == "ind" || reporting_as == "con" || reporting_as == "other"
   end
 
   def permitted

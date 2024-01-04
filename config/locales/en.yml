@@ -30,6 +30,10 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+  test:
+    message_html: |
+      This is a test version of the "Report an issue with the UK's internal market" service, you cannot contact the CMA on this page.<br /><br /><a href="https://www.gov.uk/guidance/report-a-uk-internal-market-issue">Report an issue with the UK's internal market</a> using the live service.
+
   service: 
     name: "Report an issue with the UK's Internal Market"
 
@@ -75,7 +79,8 @@ en:
           Thank you for completing this online form. Your submission has been successfully received by the Office for the Internal Market (OIM).
         </p>
         <!-- <p class="govuk-body">If you have provided an email address, you will receive automated confirmation of your submission.</p> -->
-        <p class="govuk-body">A response from the OIM will follow in the next 10 working days. While the OIM has no powers to resolve an individual issue, we will review your submission and where possible, we will point you towards relevant guidance and potential sources of assistance.</p>
+        <p class="govuk-body">We will respond in the next 5 working days.</p>
+        <p class="govuk-body">Although we can bring issues to the attention of the UK government and devolved administrations through our reporting, the OIM cannot resolve issues directly, enforce the requirements set out in the UK Internal Market Act, or provide advice and support to individuals or businesses. However, we will respond to your submission individually, sharing relevant guidance and potential sources of assistance where possible.</p>
         <p class="govuk-body">
           The information you share with us about issues in the UK internal market is invaluable in enabling us to monitor how trade within the UK is functioning and to identify emerging issues. It informs our reporting to governments, helping them to understand the impact of laws on businesses and consumers around the UK.
         </p>
@@ -97,6 +102,7 @@ en:
           <li>personal data (identifying information about yourself or someone else)</li>
         </ul>
         <p class="govuk-body">Our <a href="%{link_info_charter}" class="govuk-link govuk-link--no-visited-state">How we use your information</a> page explains how the OIM will handle both types of information.</p>
+        <p class="govuk-body">This form can be submitted anonymously, but we may not be able to respond if you choose not to provide your information.</p>
   report_issue_steps:
     contact_details:
       page_title: Name and contact details
@@ -137,6 +143,7 @@ en:
         </div>
     issue_sector:
       page_title: Sectors affected by your issue
+      caption: Tell us about your internal market issue
       supplement_text_html: |
         <div class="govuk-hint">Describe the sectors this issue affects, or could affect.</div>
         <div class="govuk-inset-text">
@@ -144,9 +151,10 @@ en:
         </div>
     issue_describe:
       page_title: Describe your issue
+      caption: Tell us about your internal market issue
       supplement_text_html: |
         <div class="govuk-hint">
-          <p>Describe the nature of the issue. For example:</p>
+          <p>Tell us about the nature of the issue, for example:</p>
           <ol class="govuk-hint govuk-list govuk-list--bullet">
             <li>your goods or services are being refused because they do not comply with regulations in an area of the UK</li>
             <li>you think unfair conditions are being imposed in relation to the sale of goods or provision of your services in an area of the UK</li>
@@ -157,6 +165,7 @@ en:
         </div>
     issue_impact:
       page_title: What is the impact of your issue
+      caption: Tell us about your internal market issue
       supplement_text_html: |
         <div class="govuk-hint">Describe the impact of the issue, including the scale and duration if known.</div>
         <div class="govuk-inset-text">
@@ -164,6 +173,7 @@ en:
         </div>
     issue_regs:
       page_title: Relevant regulations
+      caption: Tell us about your internal market issue
       supplement_text_html: |
         <div class="govuk-hint">Provide details of any relevant regulations.</div>
         <div class="govuk-inset-text">
@@ -171,6 +181,7 @@ en:
         </div>
     issue_reported:
       page_title: Issue reported
+      caption: Tell us about your internal market issue
       supplement_text_html: |
         <div class="govuk-hint">Tell us if you already have reported this issue to another regulator or an organisation, such as a trade association or professional body.</div>
         <div class="govuk-hint">Please name the regulator or organisation below.</div>
@@ -183,13 +194,17 @@ en:
       page_title: Supporting documentation
       heading: Supporting documentation
       inset_text_html: |
-        <p>You may provide evidence to support your submission.</p>
-        <p>If you do not have additional evidence, select continue below.</p>
+        <p>You may provide documentation to support your submission.</p>
+        <p>Examples of documentation that could be helpful to include are:</p>
         <ul class="govuk-list govuk-list--bullet">
-          <li>upload up to 5 files</li>
-          <li>files can be up to 10 MB</li>
-          <li>most file types are supported (PDF, DOC, Excel, JPG, etc.)</li>
+          <li>emails</li>
+          <li>screenshots</li>
+          <li>texts or WhatsApp messages</li>
         </ul>
+        <p>You can upload up to 5 files</p>
+        <p>Files can be up to 10 MB and</p>
+        <p>most file types are supported (PDF, DOC, Excel, JPG, etc.)</p>
+        <p>If you do not have additional evidence, select Continue.</p>
 
     summary:
       page_title: Review your submission
@@ -200,17 +215,17 @@ en:
     legend:
       issue:
         reporting_as: I am reporting as
-        area_of_ops: In what areas of the UK do you do business?
-        impact_area: Where in the UK are people experiencing the impact of this issue?
+        area_of_ops: In what areas of the UK do you operate?
+        impact_area: What part of the UK is affected by this issue?
     hint:
       issue:
         reporting_as_options:
           other: Provide further details below.
-        impact_area: Select all that apply. Do you consider that the issue is impacting on a particular area of the UK, or more widely?
+        impact_area: Select all that apply. Where in the UK are consumers experiencing the impact of this issue?
         impact_area_options:
           other: Provide further details below.
         area_of_ops: Select all that apply. For non-trading bodies, what area of the UK do you cover?
-        business_sector: For cross-sector organisations, enter “N/A"
+        business_sector: If you operate in multiple industries, please list them.
     label:
       issue:
         first_name: First name
@@ -218,7 +233,8 @@ en:
         email: Email address
         telephone: Telephone number
         reporting_as_options:
-          ind: an individual professional or consumer
+          ind: an individual professional
+          con: a consumer
           business: a business
           pb: a professional body, trade association or other business representation organisation
           tu: a trade union
@@ -237,13 +253,13 @@ en:
           ni: Northern Ireland
           wales: Wales
           scotland: Scotland
-        business_sector: In what business sectors do you operate?
+        business_sector: In what industry do you operate?
         issue: Tell us about your internal market issue
-        issue_sector: Tell us about the sectors affected by your internal market issue
-        issue_description: Describe your internal market issue
-        issue_impact: What is the impact of your internal market issue?
-        issue_regs: Are there any regulations relevant to your internal market issue?
-        issue_reported: Have you reported this issue to another regulator or organisation?
+        issue_sector: What sectors does it affect? What sectors could it affect?
+        issue_description: What is happening?
+        issue_impact: What is the impact of the issue? How long has it been happening and how many people or businesses is it affecting?
+        issue_regs: Are there any relevant regulations?
+        issue_reported: Have you reported this issue to another regulator, or elsewhere?
         impact_area_options:
           england: England
           ni: Northern Ireland
@@ -251,6 +267,6 @@ en:
           scotland: Scotland
           other: Other
         impact_other: Provide additional information, if 'other' selected
-        documents: Choose a file
+        documents: Upload a file
 
 

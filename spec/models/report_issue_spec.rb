@@ -18,6 +18,11 @@ RSpec.describe ReportIssue, type: :model do
         subject = described_class.new(reporting_as: "other")
         expect(subject).to be_individual_reporting
       end
+
+      it "must be individual" do
+        subject = described_class.new(reporting_as: "con")
+        expect(subject).to be_individual_reporting
+      end
     end
 
     context "otherwise not an individual" do
@@ -50,7 +55,7 @@ RSpec.describe ReportIssue, type: :model do
   describe "#reporting_as_data" do
     it "must remove any nil or empty additional text" do
       subject = described_class.new(reporting_as: "ind")
-      expect(subject.reporting_as_data).to eq ["an individual professional or consumer"]
+      expect(subject.reporting_as_data).to eq ["an individual professional"]
     end
 
     it "must return 2 elements when additional text included" do
@@ -62,7 +67,7 @@ RSpec.describe ReportIssue, type: :model do
   describe "#reporting_as_text" do
     it "must return locale text for reporting as" do
       subject = described_class.new(reporting_as: "ind")
-      expect(subject.reporting_as_text).to eq "an individual professional or consumer"
+      expect(subject.reporting_as_text).to eq "an individual professional"
     end
 
     it "must return locale text for reporting as" do

@@ -23,6 +23,10 @@ module ApplicationHelper
     Rails.application.config.x.link_start_page
   end
 
+  def test_message
+    Rails.application.config.x.test_message
+  end
+
   def title(page_title)
     content_for :page_title, [page_title.presence, service_name, "GOV.UK"].compact.join(" - ")
   end

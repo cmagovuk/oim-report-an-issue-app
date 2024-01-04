@@ -62,6 +62,7 @@
       </div>
       <%= yield(:back_link) %>
       <main class="govuk-main-wrapper" id="main-content" role="main">
+        <%= render 'layouts/test_message' if test_message.present? %>
         <%= yield %>
       </main>
     </div>
